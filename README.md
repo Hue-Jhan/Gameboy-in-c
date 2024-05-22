@@ -1,7 +1,7 @@
 # Gameboy-in-c 🕹
 GameBoy in C. Games: Tic Tac Toe, Connect 4, i will add more games such as Battleship (maybe)
 
-<img src="gaymboy.png" width="350" />
+<img src="files/gaymboy.png" width="350" />
 
 # Games
 - Tic Tac Toe (which u can find here: https://github.com/Hue-Jhan/Tic-Tac-Toe-C)
