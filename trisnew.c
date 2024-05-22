@@ -173,7 +173,7 @@ int checkwinnerX_t(tabellat tabella1) {
     int x=10;
     int y=10;
     while (i<=2) { // controllo orizzontale destra
-        if (tabella1.valori[i][0] == tabella1.valori[i][1] && tabella1.valori[i][2] == ' ') {
+        if (tabella1.valori[i][0] != ' ' && tabella1.valori[i][0] == tabella1.valori[i][1] && tabella1.valori[i][2] == ' ') {
             x=i;
             y=2;
             return x; }
@@ -181,7 +181,7 @@ int checkwinnerX_t(tabellat tabella1) {
     i=0;
     j=0;
     while (i<=2) { // controllo orizzontale sinistra
-        if (tabella1.valori[i][2] == tabella1.valori[i][1]  && tabella1.valori[i][0] == ' ') {
+        if (tabella1.valori[i][2] == tabella1.valori[i][1] && tabella1.valori[i][2] != ' ' && tabella1.valori[i][0] == ' ') {
             x=i;
             y=0;
             return x; }
@@ -189,7 +189,7 @@ int checkwinnerX_t(tabellat tabella1) {
     i=0;
     j=0;
     while (j<3) { // controllo verticale destra
-        if (tabella1.valori[0][j] == tabella1.valori[1][j] && tabella1.valori[2][j] == ' ') {
+        if (tabella1.valori[0][j] == tabella1.valori[1][j] && tabella1.valori[0][j] != ' ' && tabella1.valori[2][j] == ' ') {    
             x=2;
             y=j;
             return x; }
@@ -197,39 +197,39 @@ int checkwinnerX_t(tabellat tabella1) {
     i=0;
     j=0;
     while (j<3) { // controllo verticale sinistra
-        if (tabella1.valori[2][j] == tabella1.valori[1][j] && tabella1.valori[0][j] == ' ') {
+        if (tabella1.valori[2][j] == tabella1.valori[1][j] && tabella1.valori[2][j] != ' ' && tabella1.valori[0][j] == ' ') {
             x=0;
             y=j;
             return x; }
         j++;    }
     i=0;
     j=0;
-    if (tabella1.valori[0][0] == tabella1.valori[1][1] && tabella1.valori[2][2] == ' ') {
+    if (tabella1.valori[0][0] == tabella1.valori[1][1] && tabella1.valori[0][0] != ' ' && tabella1.valori[2][2] == ' ') {
         x=2;
         y=2;
         return x;
     }
-    if (tabella1.valori[0][2] == tabella1.valori[1][1] && tabella1.valori[2][0] == ' ') {
+    if (tabella1.valori[0][2] == tabella1.valori[1][1] && tabella1.valori[1][1] != ' ' && tabella1.valori[2][0] == ' ') {
         x=2;
         y=0;
         return x;
     }
-    if (tabella1.valori[0][0] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][2]) {
+    if (tabella1.valori[0][0] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][2] && tabella1.valori[1][1] != ' ') {
         x=0;
         y=0;
         return x;
     }
-    if (tabella1.valori[0][2] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][0]) {
+    if (tabella1.valori[0][2] == ' ' && tabella1.valori[1][1] ==  tabella1.valori[2][0] && tabella1.valori[1][1] != ' ') {
         x=0;
         y=2;
         return x;
     }
-    if (tabella1.valori[0][0] == tabella1.valori[2][2] && tabella1.valori[1][1] == ' ') {
+    if (tabella1.valori[0][0] == tabella1.valori[2][2] && tabella1.valori[0][0] != ' ' && tabella1.valori[1][1] == ' ') {
         x=1;
         y=1;
         return x;
     }
-    if (tabella1.valori[0][2] == tabella1.valori[2][0] && tabella1.valori[1][1] == ' ') {
+    if (tabella1.valori[0][2] == tabella1.valori[2][0] && tabella1.valori[0][2] != ' ' && tabella1.valori[1][1] == ' ') {
         x=1;
         y=1;
         return x;
@@ -242,7 +242,7 @@ int checkwinnerY_t(tabellat tabella1) {
     int x=10;
     int y=10;
     while (i<=2) { // controllo orizzontale destra
-        if (tabella1.valori[i][0] == tabella1.valori[i][1] && tabella1.valori[i][2] == ' ') {
+        if (tabella1.valori[i][0] == tabella1.valori[i][1] && tabella1.valori[i][0] != ' ' && tabella1.valori[i][2] == ' ') {
             x=i;
             y=2;
             return y; }
@@ -250,7 +250,7 @@ int checkwinnerY_t(tabellat tabella1) {
     i=0;
     j=0;
     while (i<=2) { // controllo orizzontale sinistra
-        if (tabella1.valori[i][2] == tabella1.valori[i][1] && tabella1.valori[i][0] == ' ') {
+        if (tabella1.valori[i][2] == tabella1.valori[i][1] && tabella1.valori[i][2] != ' ' && tabella1.valori[i][0] == ' ') {
             x=i;
             y=0;
             return y; }
@@ -258,7 +258,7 @@ int checkwinnerY_t(tabellat tabella1) {
     i=0;
     j=0;
     while (j<3) { // controllo verticale destra
-        if (tabella1.valori[0][j] == tabella1.valori[1][j] && tabella1.valori[2][j] == ' ') {
+        if (tabella1.valori[0][j] == tabella1.valori[1][j] && tabella1.valori[0][j] != ' ' && tabella1.valori[2][j] == ' ') {
             x=2;
             y=j;
             return y; }
@@ -266,39 +266,39 @@ int checkwinnerY_t(tabellat tabella1) {
     i=0;
     j=0;
     while (j<3) { // controllo verticale sinistra
-        if (tabella1.valori[2][j] == tabella1.valori[1][j] && tabella1.valori[0][j] == ' ') {
+        if (tabella1.valori[2][j] == tabella1.valori[1][j] && tabella1.valori[2][j] != ' ' && tabella1.valori[0][j] == ' ') {
             x=0;
             y=j;
             return y; }
         j++;    }
     i=0;
     j=0;
-    if (tabella1.valori[0][0] == tabella1.valori[1][1] && tabella1.valori[2][2] == ' ') {
+    if (tabella1.valori[0][0] == tabella1.valori[1][1] && tabella1.valori[0][0] != ' ' && tabella1.valori[2][2] == ' ') {
         x=2;
         y=2;
         return y;
     }
-    if (tabella1.valori[0][2] == tabella1.valori[1][1] && tabella1.valori[2][0] == ' ') {
+    if (tabella1.valori[0][2] == tabella1.valori[1][1] && tabella1.valori[0][2] != ' ' && tabella1.valori[2][0] == ' ') {
         x=2;
         y=0;
         return y;
     }
-    if (tabella1.valori[0][0] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][2]) {
+    if (tabella1.valori[0][0] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][2] && tabella1.valori[1][1] != ' ' ) {
         x=0;
         y=0;
         return y;
     }
-    if (tabella1.valori[0][2] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][0]) {
+    if (tabella1.valori[0][2] == ' ' && tabella1.valori[1][1] == tabella1.valori[2][0] && tabella1.valori[1][1] != ' ' ) {
         x=0;
         y=2;
         return y;
     }
-    if (tabella1.valori[0][0] == tabella1.valori[2][2] && tabella1.valori[1][1] == ' ') {
+    if (tabella1.valori[0][0] == tabella1.valori[2][2] && tabella1.valori[0][0] != ' ' && tabella1.valori[1][1] == ' ') {
         x=1;
         y=1;
         return y;
     }
-    if (tabella1.valori[0][2] == tabella1.valori[2][0] && tabella1.valori[1][1] == ' ') {
+    if (tabella1.valori[0][2] == tabella1.valori[2][0] && tabella1.valori[0][2] != ' ' && tabella1.valori[1][1] == ' ') {
         x=1;
         y=1;
         return y;
