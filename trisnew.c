@@ -1,4 +1,4 @@
-#include "trisnew.h"
+#include "headers/trisnew.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
