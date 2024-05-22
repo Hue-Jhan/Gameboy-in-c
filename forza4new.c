@@ -1,4 +1,4 @@
-#include "forza4new.h"
+#include "headers/forza4new.h"
 // forza 4 (connect 4) with anti-easywin functions
 #include <stdio.h>
 #include <stdlib.h>
