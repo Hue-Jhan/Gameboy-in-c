@@ -2,6 +2,7 @@
 GameBoy in C. Games: Tic Tac Toe, Connect 4, i will add more games such as Battleship (maybe)
 
 <img src="files/gaymboy.png" width="350" />
+(yeah i mispelled number 3, BattleShip)
 
 # Games
 - Tic Tac Toe (which u can find here: https://github.com/Hue-Jhan/Tic-Tac-Toe-C)
